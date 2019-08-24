@@ -1,0 +1,407 @@
+$primary-color: #FFEC8B;
+$submit-btn-bg-color: black;
+$submit-btn-color:  white;
+
+body, html {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'PT Mono', serif;
+    //display: none;
+}
+
+.main-video{
+    width:75%;
+    height:300px;
+}
+.bodygame {
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Mono', serif;
+    color: #ffffff;
+  }
+  canvas {
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .current-score {
+    left: 20px;
+  }
+  .top-score {
+    right: 20px;
+  }
+  .score {
+    display: block;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    font-size: 20px;
+  }
+  .controls {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .endgame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    z-index: 1;
+    text-align: center;
+  }
+  button{
+    border: 4px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-family: 'PT Mono', serif;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+.portfolioButton {
+    border-style: ridge;
+   
+}
+
+.portfolioButton:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.patchNotes {
+    margin-left: 80px;
+}
+
+.teamCards {
+    width: 98%;
+    height: auto;
+    background-color: rgb(12, 43, 80);
+    display: inline-block;
+    margin: 7px 5px;
+    vertical-align: top;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  color: white;
+  line-height: 1.5;
+}
+
+.teamCards:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+    background-color:rgb(92, 149, 199);
+    box-shadow: 0px 5px 50px -8px white;
+    cursor: pointer;
+    color: black;
+    line-height: 1.5;
+
+}
+.videolist{
+  list-style: none; 
+}
+
+.cardNames:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+.cta {
+    text-decoration: none;
+}
+
+.patch {
+    position: absolute;
+    bottom: 400px;
+    left: 80px;
+}
+
+.loginUser {
+    margin-bottom: -160px;
+   
+}
+
+.playGameLink {
+    max-width: 200px;
+    text-decoration: none;
+    background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 10px;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+.tableHighScores {
+    padding: 10px;
+    margin: 15px;
+    width: 96%;
+    border-style: groove;
+}
+
+.searchBarVideo {
+    height: 60px;
+    width: 908px;
+    margin-bottom: 4px;
+    font-size: 28px;
+}
+
+.videoHolder {
+    
+    padding: 15px;
+    margin-left: 12px;
+    
+}
+
+.navbackground{
+    background-color: rgb(113, 110, 110);
+}
+
+header {
+    padding: 1em;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+    background: white;
+
+  
+
+    a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.85);
+
+    }
+        a.logo {
+            font-weight: bold;
+            text-transform: uppercase;
+    }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            
+            li a {
+                padding: 1em;
+            }
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto;
+
+        section {
+            padding: 3em;
+       
+            h1, h2, .read-btn {
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .read-btn {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                //background: url(arrow) picture
+                background-size: 8px;
+                background-position: 0 1px;
+                padding-left: 1em;
+            }
+
+            .primary {
+                padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+                background-position: 3em;
+                display: inline-block;
+                margin-top: 3em;
+                margin-left: -3em;
+                color: red;
+
+            }
+
+            .clipper {
+                overflow: hidden;
+            }
+        }
+
+       
+
+        section.hero {
+            padding-top: 4em;
+            background-image: url(images/astroids.jpg);
+            background-size: cover;
+            color: whitesmoke;
+
+            p {
+                width: 70%;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        section.sidebar, section.subscribe {
+            font-size: .9rem;
+            line-height: 1.6em;
+        }
+        
+        section.sidebar {
+            background: $primary-color;
+
+            .read-btn {
+                margin-top: 2em;
+                display: block;
+                background-position: 0 .2em;
+            }
+        }
+
+        section.subscribe {
+
+            background-color: rgb(218, 127, 24);
+            
+            a {
+                color: white;
+            }
+
+            input {
+                width: calc(100% - 2em);
+                padding: 1em;
+                font-family: 'Montserrat';
+                margin-bottom: 1em;
+            }
+
+            button {
+                width: 100%;
+                background: $submit-btn-bg-color;
+                color: $submit-btn-color;
+                padding: 1em;
+                border: none;
+                font-family: 'Montserrat';
+            }
+        }
+    }
+
+    @media only screen and (max-width: 840px) {
+
+       
+        .playGameLink {
+            position: absolute;
+            bottom: 10px;
+            right: 60px;
+        }
+
+        .loginUser {
+            position: absolute;
+            bottom: 160px;
+            align-content: auto;
+            
+        }
+    }
+
+  
+    @media only screen and (min-width: 640px) {
+        html {
+            font-size: 18px;
+        }
+    }
+      
+    @media only screen and (min-width: 840px) {
+        header {
+            background: none;
+        }
+
+        .wrapper {
+            grid-template-columns: 70% auto;
+            grid-template-rows: 60% auto;
+            grid-template-areas: 
+                "hero featured"
+                "hero subscribe";
+            height: 100vh;
+        } 
+
+        section.hero {
+            grid-area: hero;
+        }
+
+        section {
+            display: grid;
+            grid-template-rows: auto;
+            align-items: center;
+        }
+    }
+
+    @media only screen and (min-width: 1800px) {
+        html {
+            font-size: 21px;
+        }
+    }

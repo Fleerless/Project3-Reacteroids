@@ -1,0 +1,430 @@
+body, html {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'PT Mono', serif;
+}
+
+.main-video {
+  width: 75%;
+  height: 300px;
+}
+
+.bodygame {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Mono', serif;
+  color: #ffffff;
+}
+
+canvas {
+  display: block;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.current-score {
+  left: 20px;
+}
+
+.top-score {
+  right: 20px;
+}
+
+.score {
+  display: block;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.controls {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 1;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.endgame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 16px;
+  z-index: 1;
+  text-align: center;
+}
+
+button {
+  border: 4px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-family: 'PT Mono', serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.portfolioButton {
+  border-style: ridge;
+}
+
+.portfolioButton:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.patchNotes {
+  margin-left: 80px;
+}
+
+.teamCards {
+  width: 98%;
+  height: auto;
+  background-color: #0c2b50;
+  display: inline-block;
+  margin: 7px 5px;
+  vertical-align: top;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  color: white;
+  line-height: 1.5;
+}
+
+.teamCards:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #5c95c7;
+  -webkit-box-shadow: 0px 5px 50px -8px white;
+          box-shadow: 0px 5px 50px -8px white;
+  cursor: pointer;
+  color: black;
+  line-height: 1.5;
+}
+
+.videolist {
+  list-style: none;
+}
+
+.cardNames:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cta {
+  text-decoration: none;
+}
+
+.patch {
+  position: absolute;
+  bottom: 400px;
+  left: 80px;
+}
+
+.loginUser {
+  margin-bottom: -160px;
+}
+
+.playGameLink {
+  max-width: 200px;
+  text-decoration: none;
+  background-color: #004A7F;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 10px;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+  }
+  50% {
+    background-color: #FF0000;
+    -webkit-box-shadow: 0 0 40px #FF0000;
+  }
+  100% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+            box-shadow: 0 0 3px #B20000;
+  }
+  50% {
+    background-color: #FF0000;
+    -webkit-box-shadow: 0 0 40px #FF0000;
+            box-shadow: 0 0 40px #FF0000;
+  }
+  100% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+            box-shadow: 0 0 3px #B20000;
+  }
+}
+
+.tableHighScores {
+  padding: 10px;
+  margin: 15px;
+  width: 96%;
+  border-style: groove;
+}
+
+.searchBarVideo {
+  height: 60px;
+  width: 908px;
+  margin-bottom: 4px;
+  font-size: 28px;
+}
+
+.videoHolder {
+  padding: 15px;
+  margin-left: 12px;
+}
+
+.navbackground {
+  background-color: #716e6e;
+}
+
+header {
+  padding: 1em;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(100% - 2em);
+  background: white;
+}
+
+header a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+header a.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.wrapper section {
+  padding: 3em;
+}
+
+.wrapper section h1, .wrapper section h2, .wrapper section .read-btn {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wrapper section h2 {
+  font-size: 1.4rem;
+}
+
+.wrapper section .read-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-size: 8px;
+  background-position: 0 1px;
+  padding-left: 1em;
+}
+
+.wrapper section .primary {
+  padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+  background-position: 3em;
+  display: inline-block;
+  margin-top: 3em;
+  margin-left: -3em;
+  color: red;
+}
+
+.wrapper section .clipper {
+  overflow: hidden;
+}
+
+.wrapper section.hero {
+  padding-top: 4em;
+  background-image: url(images/astroids.jpg);
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.wrapper section.hero p {
+  width: 70%;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.wrapper section.hero h1 {
+  font-size: 2.4rem;
+}
+
+.wrapper section.sidebar, .wrapper section.subscribe {
+  font-size: .9rem;
+  line-height: 1.6em;
+}
+
+.wrapper section.sidebar {
+  background: #FFEC8B;
+}
+
+.wrapper section.sidebar .read-btn {
+  margin-top: 2em;
+  display: block;
+  background-position: 0 .2em;
+}
+
+.wrapper section.subscribe {
+  background-color: #da7f18;
+}
+
+.wrapper section.subscribe a {
+  color: white;
+}
+
+.wrapper section.subscribe input {
+  width: calc(100% - 2em);
+  padding: 1em;
+  font-family: 'Montserrat';
+  margin-bottom: 1em;
+}
+
+.wrapper section.subscribe button {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 1em;
+  border: none;
+  font-family: 'Montserrat';
+}
+
+.blacktext {
+  color: black
+}
+
+@media only screen and (max-width: 840px) {
+  .playGameLink {
+    position: absolute;
+    bottom: 10px;
+    right: 60px;
+  }
+  .loginUser {
+    position: absolute;
+    bottom: 160px;
+    -ms-flex-line-pack: auto;
+        align-content: auto;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  header {
+    background: none;
+  }
+  .wrapper {
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+    -ms-grid-rows: 60% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: "hero featured" "hero subscribe";
+    height: 100vh;
+  }
+  section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: hero;
+  }
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 21px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
