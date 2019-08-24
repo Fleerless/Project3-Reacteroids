@@ -40,6 +40,11 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.use('/user', user)
 
+// If no API routes are hit, send the React app
+router.use(function(req, res) {
+	res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  });
+
 // Starting Server 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
