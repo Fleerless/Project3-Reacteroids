@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === "production") {
 app.use('/user', user)
 
 // If no API routes are hit, send the React app
-router.use(function(req, res) {
+app.use(function(req, res) {
 	res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 
