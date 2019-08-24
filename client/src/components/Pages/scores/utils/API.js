@@ -3,7 +3,7 @@ import axios from "axios";
 //REMOVE KEY AFTER TEST. Every key stroke uses up the API data quota...
 //...if a valid key is left in "const apiKey"
 
-const apiKey = "AIzaSyCou1rS_99RZ66HGwHEiHskLF5Oq1di2l0";
+const apiKey = "place key here";
 //  use this key: AIzaSyCou1rS_99RZ66HGwHEiHskLF5Oq1di2l0
 
 //REMOVE KEY AFTER TEST. Every key stroke uses up the API data quota...
