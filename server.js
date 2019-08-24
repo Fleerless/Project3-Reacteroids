@@ -41,9 +41,9 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 app.use('/user', user)
 
-// If no API routes are hit, send the React app
+  // If no API routes are hit, send the React app
 app.use(function(req, res) {
-	res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
   });
 
 // Starting Server 
