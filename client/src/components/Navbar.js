@@ -18,7 +18,11 @@ class Navbar extends Component {
         this.logout = this.logout.bind(this)
     }
 
-    
+    redirect(route){
+        this.setState({
+            redirectTo: route
+        })
+    }
 
     logout(event) {
         event.preventDefault()
