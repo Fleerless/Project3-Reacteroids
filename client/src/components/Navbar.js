@@ -31,10 +31,7 @@ class Navbar extends Component {
         axios.post('/user/logout').then(response => {
             console.log(response.data)
             if (response.status === 200) {
-                this.props.updateUser({
-                    loggedIn: false,
-                    username: null
-                })
+               
             }
         }).catch(error => {
             console.log(error)
@@ -61,7 +58,7 @@ class Navbar extends Component {
                                 <li><Link className="btn gsap-btn blacktext" to="/game">Game</Link></li>
                                 <li><Link className="btn gsap-btn blacktext" to="/store">Store</Link></li>
                                 <li><Link className="btn gsap-btn blacktext" to="/scores">High Scores</Link></li>
-                                <li><a className="btn gsap-btn blacktext" href="/" onClick={this.logout}>Log Out</a></li>
+                                <li><Link className="btn gsap-btn blacktext" to="/logout">Log Out</Link></li>
                             </ul>
                         </nav>
                     </header>
