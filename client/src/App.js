@@ -5,6 +5,7 @@ import { Home } from "./components/Pages/home/home";
 import { Scores } from "./components/Pages/scores/scores";
 import { Patch } from "./components/Pages/patch/patch";
 import { Store } from "./components/Pages/store/Store"
+import { Logout } from './components/Pages/logout/Logout'
 import Navbar from "./components/Navbar";
 import Reacteroids from './components/Pages/game/Reacteroids'
 import axios from 'axios';
@@ -66,7 +67,8 @@ class App extends Component {
 				console.log('Get user: no user');
 				this.setState({
 					loggedIn: false,
-					username: null
+					username: null,
+					
 
 				})
 			}
@@ -85,7 +87,7 @@ class App extends Component {
 
 						
 							{/* MENU */}
-							<Navbar/>
+							<Navbar />
 
 
 							{/* CONTENT */}
@@ -106,6 +108,9 @@ class App extends Component {
 								</Route>
 								<Route exact path="/store">
 									{({ match }) => <Store show={match !== null} />}
+								</Route>
+								<Route exact path ='/logout'>
+									{({ match }) => <Logout updateUser={this.updateUser} show={match !== null}/>}
 								</Route>
 							</Switch>
 							</div>
