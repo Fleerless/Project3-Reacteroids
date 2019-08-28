@@ -17,7 +17,7 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <form   className ="searchHolder" onSubmit={event => event.preventDefault() }>
+            <form    onSubmit={event => event.preventDefault() }>
                 <label >
                    <p>Use the search field below to find videos on various Asteroids versions over the years:</p>
                    <ul>
@@ -27,7 +27,7 @@ class SearchBar extends Component {
                        <li>Asteroids 1979 </li>
 
                            </ul> 
-                    <input
+                    <input className = "searchHolder"
                   
                         type="text"
                         placeholder="SEARCH FIELD"

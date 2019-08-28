@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Transition } from "react-transition-group";
-import { TweenMax } from "gsap/all";
 import Login from "../home/components/LogIn";
 import SignUp from "../home/components/SignUp";
 
@@ -38,18 +37,9 @@ export class Home extends Component {
     render() {
         return (
 
-            <Transition
-                unmountOnExit
-                in={this.state.show}
-                timeout={1000}
-                onEnter={node => TweenMax.set(node, startState)}
-                addEndListener={(node, done) => {
-                    TweenMax.to(node, 0.5, {
-                        autoAlpha: this.state.show ? 1 : 0,
-                        y: this.state.show ? 0 : 50,
-                        onComplete: done
-                    });
-                }}
+            <container
+                
+                
             >
                 <div>
 
@@ -105,6 +95,6 @@ export class Home extends Component {
                         </section>
                     </div>
                 </div>
-            </Transition>)
+            </container>)
     }
 }

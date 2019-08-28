@@ -1,8 +1,4 @@
 import React from "react";
-import { Transition } from "react-transition-group";
-import { TweenLite } from "gsap/all";
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,24 +9,11 @@ import Typography from '@material-ui/core/Typography';
 
 
 
-const startState = { autoAlpha: 0, y: -50 };
 
 
-export const Patch = props => <Transition
-	unmountOnExit
-	in={props.show}
-	timeout={1000}
-	onEnter={ node => TweenLite.set(node, startState) }
-	addEndListener={ (node, done) => {
-		TweenLite.to(node, 0.5, {
-			autoAlpha: props.show ? 1 : 0,
-			y: props.show ? 0 : 50,
-			onComplete: done
-		});
-	}}
 
-	
->	
+export const Patch = props => 
+
 <body>
 <Grid container spacing={1}>
         <Grid item xs={12}>
@@ -54,9 +37,9 @@ export const Patch = props => <Transition
 					</div>
 					
 					<Typography>
-					<p>Built initial stateful ScoreTable component on the High Scores page. 
+					<p>Developed initial stateful ScoreTable component on the High Scores page. 
 							Teamed with Kyle Robinson on Project Details page, to facilitate portfolio access. 
-							Developed the VideoGrid YouTube API component that allows for real-time video searching.</p>
+							Developed the VideoGrid YouTube API component that allows for real-time video searching. Created project presentation.</p>
 					</Typography>
 					<CardActions>
 					<div className="portfolioButton">
@@ -140,33 +123,7 @@ export const Patch = props => <Transition
 		</Grid>
 
 
-		{/* <div className={paper>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={paper}>xs=12</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={paper}>xs=3</Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={paper}>xs=3</Paper>
-        </Grid>
-      </Grid>
-    </div> */}
-
+	
 
 	</Grid>
 	</body>
-</Transition>;
