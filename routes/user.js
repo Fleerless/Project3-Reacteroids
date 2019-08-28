@@ -112,17 +112,36 @@ router.get('/scorehigh', (req, res, next) => {
 
 router.put('/storeupdate', (req, res, next) => {
     console.log('store upgrade')
-    console.log(res);
+    console.log(`
+    
+----------  RESPONSE  ------------
+    
+    ${res.data}`);
+
+const colors = res.data;
+console.log(`
+
+----------  COLORS  ----------
 
 
+${colors}`)
     User.update(
         { "username": req.body.username },{$set: {"shipColor": colors}}).then(data=>{
-        console.log(data);
+        console.log(`
+        
+----------  DATA  -------------
+
+        
+        ${data}`);
         res.json({
             colors: data
         })
     }).catch(error=>{
-        console.log(error);
+        console.log(`
+
+        --------------  ERROR  ----------------
+        
+        ${error}`);
         res.send(error);
 
     })

@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import Reacteroids from './components/Pages/game/Reacteroids'
 import axios from 'axios';
 import './style.css';
+import { stat } from 'fs';
 
 
 
@@ -107,7 +108,7 @@ class App extends Component {
 									{({ match }) => <Patch show={match !== null} />}
 								</Route>
 								<Route exact path="/store">
-									{({ match }) => <Store show={match !== null} />}
+									{({ match }) => <Store show={match !== null} credits={this.state.credits} username={this.state.username} credits={this.state.credits} />}
 								</Route>
 								<Route exact path ='/logout'>
 									{({ match }) => <Logout updateUser={this.updateUser} show={match !== null}/>}
