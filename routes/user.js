@@ -105,18 +105,17 @@ router.get('/scorehigh', (req, res, next) => {
         console.log(error);
         res.send(error);
 
-    })
-       
+    })     
     
 })
 
-router.put('/storeupdate', (req, res, next) => {
+router.post('/storeupdate', (req, res, next) => {
     console.log('store upgrade')
     console.log(`
     
 ----------  RESPONSE  ------------
     
-    ${res.data}`);
+    `, res.body);
 
 const colors = res.data;
 console.log(`
@@ -139,13 +138,13 @@ ${colors}`)
     }).catch(error=>{
         console.log(`
 
-        --------------  ERROR  ----------------
+--------------  ERROR  ----------------
         
         ${error}`);
         res.send(error);
 
     })
-       
+
     
 })
 

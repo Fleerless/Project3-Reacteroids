@@ -21,24 +21,24 @@ export class Store extends Component {
             username: this.props.username
         })
 
-      
+
     }
 
     buyShip(colorsObject){
         this.setState({
             shipColors: colorsObject
         })
+        axios.post('/user/storeupdate', this.state.shipColors).then(response => {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     onRadioBtnClick(colorsObject) {
         this.setState({
             shipColors: colorsObject
-        })
-        axios.put('user/storeupdate').then(response => {
-
-            console.log(response.data.colors);
-
-
         })
     }
 
