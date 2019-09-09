@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Transition } from "react-transition-group";
 import Login from "../home/components/LogIn";
 import SignUp from "../home/components/SignUp";
@@ -75,7 +76,7 @@ export class Home extends Component {
                                         <li>Portfolio links</li>
                                      
                                     </ul>
-                                    <button><a href="/patch" className="read-btn">CLICK HERE</a></button>
+                                    <button><Link to="/patch" className="read-btn">CLICK HERE</Link></button>
                                 </div>
                             </div>
                         </section>
@@ -89,7 +90,7 @@ export class Home extends Component {
                                     <div>
                                         <p></p>
                                     </div>
-                                    <button><a href="/scores" className="cta">CLICK FOR HIGH SCORES</a></button>
+                                    <button><Link to="/scores" className="cta">CLICK FOR HIGH SCORES</Link></button>
                                 </div>
                             </div>
                         </section>
