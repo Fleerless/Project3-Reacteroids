@@ -13,7 +13,8 @@ export class Store extends Component {
             bulletCount: null,
             bulletPrice: 4000,
             credits: null,
-            shipColors: null
+            shipColors: null,
+            shipCost: null
         }
     }
 
@@ -22,7 +23,8 @@ export class Store extends Component {
             credits: this.props.credits,
             username: this.props.username,
             shipCount: this.props.shipCount,
-            bulletCount: this.props.bulletCount
+            bulletCount: this.props.bulletCount,
+            shipCost: this.state.shipCount * this.state.shipPrice
         })
 
 
@@ -31,15 +33,16 @@ export class Store extends Component {
     buyShip(colorsObject){
         let shipCost = this.state.shipPrice * this.state.shipCount;
         let newCredits = this.state.credits - shipCost;
-
         this.props.updateUser(colorsObject);
         this.props.updateUser({
             credits: newCredits,
             shipCount: this.state.shipCount++
         })
+        shipCost = this.state.shipPrice * this.state.shipCount;
         this.setState({
             credits: newCredits,
-            shipColors: colorsObject
+            shipColors: colorsObject,
+            shipCost: shipCost
         });
         let updateShip = {
             
@@ -68,15 +71,15 @@ export class Store extends Component {
                     <div>
                         <div>
                             <Image src={require('./images/redShip.png')} className='ship-image' />
-                            <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>-{this.state.shipPrice} cr</Button>
+                            <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
                         <div>
                             <Image src={require('./images/orangeShip.png')} className='ship-image' />
-                            <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#FF8C00', shipOutline: '#ffffff'})} active={this.state.rSelected === 1}>-{this.state.shipPrice} cr</Button>
+                            <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#FF8C00', shipOutline: '#ffffff'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
                         <div>
                         <Image src={require('./images/purpleShip.png')} className='ship-image' />
-                        <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#9400D3', shipOutline: '#7CFC00'})} active={this.state.rSelected === 1}>-{this.state.shipPrice} cr</Button>
+                        <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#9400D3', shipOutline: '#7CFC00'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
                     </div>
 

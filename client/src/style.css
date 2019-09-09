@@ -87,6 +87,14 @@ button:hover {
   color: #000000;
 }
 
+.blacktext {
+  color: black
+}
+.blacktext:hover {
+  color: black;
+  text-shadow: 0 0 3px #da7f18;
+
+}
 .portfolioButton {
   border-style: ridge;
 }
@@ -406,7 +414,8 @@ header nav ul li a {
         grid-template-columns: 70% auto;
     -ms-grid-rows: 60% auto;
         grid-template-rows: 60% auto;
-        grid-template-areas: "hero featured" "hero subscribe";
+        grid-template-areas: "hero featured"
+ "hero subscribe";
     height: 100vh;
   }
   section.hero {
