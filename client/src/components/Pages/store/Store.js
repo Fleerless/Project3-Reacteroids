@@ -91,7 +91,7 @@ export class Store extends Component {
                 <p>Credits: {this.props.credits}</p>
                 <div>
                     <h2>Purchase Ship Colors</h2>
-                    <div>
+                    <div >
                         <div>
                             <Image src={require('./images/redShip.png')} className='ship-image' />
                             <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
