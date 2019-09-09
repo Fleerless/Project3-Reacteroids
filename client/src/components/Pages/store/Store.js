@@ -31,11 +31,6 @@ export class Store extends Component {
     buyShip(colorsObject){
         let shipCost = this.state.shipPrice * this.state.shipCount;
         let newCredits = this.state.credits - shipCost;
-        console.log('SHIP-PRICE ', this.state.shipPrice)
-        console.log('SHIP COUNT ', this.state.shipCount)
-        console.log('SHIP COST ', shipCost)
-        console.log('CREDITS ', this.state.credits)
-        console.log('NEW CREDITS ', newCredits)
 
         this.props.updateUser(colorsObject);
         this.props.updateUser({
@@ -46,8 +41,10 @@ export class Store extends Component {
             credits: newCredits,
             shipColors: colorsObject
         });
-        console.log('UPDATE CREDITS ', this.state.credits)
-        axios.post('/user/storeupdate', this.state.shipColors)
+        let updateShip = {
+            
+        }
+        axios.post('/user/storeupdate', this.state.shipColor)
         .then(response => {
             console.log(response);
         })

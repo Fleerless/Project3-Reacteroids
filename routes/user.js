@@ -49,6 +49,7 @@ router.post(
         next()
     },
     passport.authenticate('local'),
+
     (req, res) => {
         console.log('logged in now', req.user);
         var userInfo = {
@@ -114,9 +115,9 @@ router.post('/storeupdate', (req, res) => {
     
 ----------  RESPONSE  ------------
     
-    `, res);
+    `, req.body);
 
-const colors = res.data;
+const colors = req.body;
 console.log(`
 
 ----------  COLORS  ----------
