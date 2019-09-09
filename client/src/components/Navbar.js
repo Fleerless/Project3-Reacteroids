@@ -51,7 +51,7 @@ class Navbar extends Component {
                 <div className="navbackground">
 
                     <header>
-                        <a href="/" className="Logo">PROJECT ASTEROIDS</a>
+                        <Link to="/" className="Logo">REACTEROIDS</Link>
                         <nav>
                             <ul>
                                 <li><Link className="btn gsap-btn blacktext" to="/">Home</Link></li>
