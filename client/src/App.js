@@ -108,7 +108,7 @@ class App extends Component {
 									{({ match }) => <Patch show={match !== null} />}
 								</Route>
 								<Route exact path="/store">
-									{({ match }) => <Store show={match !== null} credits={this.state.credits} username={this.state.username} credits={this.state.credits} />}
+									{({ match }) => <Store show={match !== null} credits={this.state.credits} username={this.state.username} updateUser={this.updateUser} bulletCount={this.state.bulletCount} shipCount={this.state.shipCount} />}
 								</Route>
 								<Route exact path ='/logout'>
 									{({ match }) => <Logout updateUser={this.updateUser} show={match !== null}/>}

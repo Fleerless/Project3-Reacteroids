@@ -109,13 +109,12 @@ router.get('/scorehigh', (req, res, next) => {
     
 })
 
-router.post('/storeupdate', (req, res, next) => {
-    console.log('store upgrade')
+router.post('/storeupdate', (req, res) => {
     console.log(`
     
 ----------  RESPONSE  ------------
     
-    `, res.body);
+    `, res);
 
 const colors = res.data;
 console.log(`

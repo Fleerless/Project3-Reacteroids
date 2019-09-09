@@ -8,7 +8,9 @@ export class Store extends Component {
         super(props)
         this.state = {
             username: null,
+            shipCount: null,
             shipPrice: 500,
+            bulletCount: null,
             bulletPrice: 4000,
             credits: null,
             shipColors: null
@@ -18,17 +20,35 @@ export class Store extends Component {
     componentDidMount(){
         this.setState({
             credits: this.props.credits,
-            username: this.props.username
+            username: this.props.username,
+            shipCount: this.props.shipCount,
+            bulletCount: this.props.bulletCount
         })
 
 
     }
 
     buyShip(colorsObject){
-        this.setState({
-            shipColors: colorsObject
+        let shipCost = this.state.shipPrice * this.state.shipCount;
+        let newCredits = this.state.credits - shipCost;
+        console.log('SHIP-PRICE ', this.state.shipPrice)
+        console.log('SHIP COUNT ', this.state.shipCount)
+        console.log('SHIP COST ', shipCost)
+        console.log('CREDITS ', this.state.credits)
+        console.log('NEW CREDITS ', newCredits)
+
+        this.props.updateUser(colorsObject);
+        this.props.updateUser({
+            credits: newCredits,
+            shipCount: this.state.shipCount++
         })
-        axios.post('/user/storeupdate', this.state.shipColors).then(response => {
+        this.setState({
+            credits: newCredits,
+            shipColors: colorsObject
+        });
+        console.log('UPDATE CREDITS ', this.state.credits)
+        axios.post('/user/storeupdate', this.state.shipColors)
+        .then(response => {
             console.log(response);
         })
         .catch(function (error) {
