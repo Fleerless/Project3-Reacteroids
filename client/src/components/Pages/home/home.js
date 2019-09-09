@@ -58,7 +58,7 @@ export class Home extends Component {
                                 </div>
                             </div>
                             <div className="playGameLink">
-                                <a href="/game" className="playGameLink"><h2>Play Now</h2></a>
+                                <Link to="/game" className="playGameLink"><h2>Play Now</h2></Link>
 
                             </div>
                         </section>
