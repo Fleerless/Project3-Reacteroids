@@ -12,6 +12,7 @@ export class Store extends Component {
             shipPrice: 500,
             bulletCount: null,
             bulletPrice: 4000,
+            bulletSize: null,
             credits: null,
             shipColors: null,
             shipCost: null
@@ -24,7 +25,8 @@ export class Store extends Component {
             username: this.props.username,
             shipCount: this.props.shipCount,
             bulletCount: this.props.bulletCount,
-            shipCost: this.state.shipCount * this.state.shipPrice
+            shipCost: this.state.shipCount * this.state.shipPrice,
+            bulletSize: this.props.bulletSize
         })
 
 
@@ -45,9 +47,9 @@ export class Store extends Component {
             shipCost: shipCost
         });
         let updateShip = {
-            
+            test: null
         }
-        axios.post('/user/storeupdate', this.state.shipColor)
+        axios.post('/user/storeupdate', updateShip)
         .then(response => {
             console.log(response);
         })
@@ -56,11 +58,32 @@ export class Store extends Component {
         });
     }
 
-    onRadioBtnClick(colorsObject) {
-        this.setState({
-            shipColors: colorsObject
-        })
+    buyBullet(){
+    let bulletCost = this.state.bulletPrice * this.state.bulletCount;
+    let newCredits = this.state.credits - bulletCost;
+    let newBulletSize = this.state.bulletSize + 2;
+    this.props.updateUser({
+        credits: newCredits,
+        bulletCount: this.state.bulletCount++,
+        bulletSize: newBulletSize
+    })
+    bulletCost = this.state.bulletPrice * this.state.bulletCount;
+    this.setState({
+        credits: newCredits,
+        bulletCost: bulletCost,
+        bulletSize: newBulletSize
+    });
+    let updateBullet = {
+        test: null
     }
+    axios.post('/user/storeupdate', updateBullet)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+}
 
     render(){
         return(
@@ -92,7 +115,7 @@ export class Store extends Component {
                             <img></img>
                         </div>
                         <h4>Increase bullet size by 2</h4>
-                        <Button className='blacktext' color="danger">- {this.state.bulletPrice}cr</Button>{' '}
+                        <Button className='blacktext' onClick={() => this.buyBullet()} color="danger">- {this.state.bulletCost}cr</Button>{' '}
 
                     </div>
                 </div>
