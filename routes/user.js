@@ -110,31 +110,27 @@ router.get('/scorehigh', (req, res, next) => {
     
 })
 
-router.post('/storeupdate', (req, res) => {
+router.post('/storeupdate/buyship', (req, res) => {
+const shipUpdate = req.body;
     console.log(`
     
-----------  RESPONSE  ------------
-    
-    `, req.body);
-
-const colors = req.body;
-console.log(`
-
-----------  COLORS  ----------
+----------  REQUEST  ------------
 
 
-${colors}`)
+${JSON.stringify(shipUpdate)}`)
     User.update(
-        { "username": req.body.username },{$set: {"shipColor": colors}}).then(data=>{
+        { "username": shipUpdate.username },
+        {$set: {"shipColor": shipUpdate.shipColor,
+                'shipOutline': shipUpdate.shipOutline,
+                'credits': shipUpdate.newCredits,
+                'shipCount': shipUpdate.newShipCount}})
+        .then(data=>{
         console.log(`
         
 ----------  DATA  -------------
 
         
-        ${data}`);
-        res.json({
-            colors: data
-        })
+        ${JSON.stringify(data)}`);
     }).catch(error=>{
         console.log(`
 
@@ -142,10 +138,37 @@ ${colors}`)
         
         ${error}`);
         res.send(error);
+    }) 
+})
 
-    })
-
+router.post('/storeupdate/buybullet', (req, res) => {
+const shipUpdate = req.body;
+    console.log(`
     
+----------  REQUEST  ------------
+
+
+${JSON.stringify(shipUpdate)}`)
+    User.update(
+        { "username": shipUpdate.username },
+        {$set: {"bulletSize": shipUpdate.bullet,
+                'credits': shipUpdate.newCredits,
+                'bulletCount': shipUpdate.newBulletCount}})
+        .then(data=>{
+        console.log(`
+        
+----------  DATA  -------------
+
+        
+        ${JSON.stringify(data)}`);
+    }).catch(error=>{
+        console.log(`
+
+--------------  ERROR  ----------------
+        
+        ${error}`);
+        res.send(error);
+    }) 
 })
 
 
