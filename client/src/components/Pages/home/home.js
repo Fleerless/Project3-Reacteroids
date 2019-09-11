@@ -72,9 +72,8 @@ export class Home extends Component {
                                 </div>
                                 <div className="anim-panel">
                                     <ul>
-                                        <li>Project focuses</li>
-                                        <li>Portfolio links</li>
-                                     
+                                        <li>Project Focuses</li>
+                                        <li>Team Member Portfolio Links</li>
                                     </ul>
                                     <button><Link to="/patch" className="read-btn">CLICK HERE</Link></button>
                                 </div>

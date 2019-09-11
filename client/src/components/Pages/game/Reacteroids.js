@@ -289,8 +289,17 @@ class Reacteroids extends Component {
     return (
       <div className = "bodygame">
         { endgame }
-        <span className="score current-score" >Credits: {this.state.credits}     Score: {this.state.currentScore}</span>
-        <span className="score top-score" >Top Score: {this.state.topScore}</span>
+        {this.props.username ?    
+          <>
+          <span className="score current-score" >Credits: {this.state.credits} Score: {this.state.currentScore}</span>
+          <span className="score top-score" >User Name: {this.props.username} Top Score: {this.state.topScore}</span>
+          </>
+        :
+          <>
+          <span className="score current-score" >Score: {this.state.currentScore}</span>
+          <span className="score top-score" >Top Score: {this.state.topScore}</span>
+          </>
+}
         <span className="controls" >
           Use [A][S][W][D] or [←][↑][↓][→] to MOVE<br/>
           Use [SPACE] to SHOOT <br/>
