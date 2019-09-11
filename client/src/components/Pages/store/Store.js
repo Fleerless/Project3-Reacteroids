@@ -54,7 +54,7 @@ export class Store extends Component {
                 shipOutline: colorsObject.shipOutline,
                 shipColor: colorsObject.shipColor
             })
-            shipCost = this.state.shipPrice * this.state.shipCount;
+            shipCost = this.state.shipPrice * newShipCount;
             this.setState({
                 credits: newCredits,
                 shipColor: colorsObject.shipColor,
@@ -91,7 +91,7 @@ export class Store extends Component {
                 bulletCount: newBulletCount,
                 bulletSize: newBulletSize
             })
-            bulletCost = this.state.bulletPrice * this.state.bulletCount;
+            bulletCost = this.state.bulletPrice * newBulletCount;
             this.setState({
                 credits: newCredits,
                 bulletCost: bulletCost,
