@@ -119,8 +119,11 @@ export class Store extends Component {
         return(
             <div>
                 {this.props.credits ?
-                <p>Credits: {this.props.credits}</p> :
-                <p>Credits: Please Login!</p>
+                <>
+                <p>User Name: {this.props.username}</p>
+                <p>Credits: {this.props.credits}</p>
+                </> :
+                <p>User Name: Please Login!</p>
                 }
                 <div>
                     <h2>Purchase Ship Colors</h2>
