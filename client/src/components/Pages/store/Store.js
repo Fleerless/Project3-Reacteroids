@@ -118,7 +118,10 @@ export class Store extends Component {
     render(){
         return(
             <div>
-                <p>Credits: {this.props.credits}</p>
+                {this.props.credits ?
+                <p>Credits: {this.props.credits}</p> :
+                <p>Credits: Please Login</p>
+                }
                 <div>
                     <h2>Purchase Ship Colors</h2>
                     <div >
