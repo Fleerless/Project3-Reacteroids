@@ -291,8 +291,14 @@ class Reacteroids extends Component {
         { endgame }
         {this.props.username ?    
           <>
-          <span className="score current-score" >Credits: {this.state.credits} Score: {this.state.currentScore}</span>
-          <span className="score top-score" >User Name: {this.props.username} Top Score: {this.state.topScore}</span>
+          <span className="score current-score ship-div" >
+            <span>Credits: {this.state.credits} </span> 
+            <span>Score: {this.state.currentScore}</span>
+          </span>
+          <span className="score top-score ship-div" >
+            <span>User Name: {this.props.username}</span>
+            <span>Top Score: {this.state.topScore}</span>  
+          </span>
           </>
         :
           <>
