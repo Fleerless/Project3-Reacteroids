@@ -120,20 +120,20 @@ export class Store extends Component {
             <div>
                 {this.props.credits ?
                 <p>Credits: {this.props.credits}</p> :
-                <p>Credits: Please Login</p>
+                <p>Credits: Please Login!</p>
                 }
                 <div>
                     <h2>Purchase Ship Colors</h2>
-                    <div >
-                        <div>
+                    <div className='buy-ship'>
+                        <div className='ship-div'>
                             <Image src={require('./images/redShip.png')} className='ship-image' />
                             <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
-                        <div>
+                        <div className='ship-div'>
                             <Image src={require('./images/orangeShip.png')} className='ship-image' />
                             <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#FF8C00', shipOutline: '#ffffff'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
-                        <div>
+                        <div className='ship-div'>
                         <Image src={require('./images/purpleShip.png')} className='ship-image' />
                         <Button className='blacktext' color="primary" onClick={() => this.buyShip({shipColor: '#9400D3', shipOutline: '#7CFC00'})} active={this.state.rSelected === 1}>-{this.state.shipCost} cr</Button>
                         </div>
@@ -143,12 +143,10 @@ export class Store extends Component {
                 <div>
                     <h2>Purchase Bullet Upgrade</h2>
                     <div>
-                        <div>
-                            <img></img>
-                            <img></img>
+                        <div className='buy-bullet'>
+                            <h4>Increase bullet size to {this.state.bulletSize + 2}</h4>
+                            <Button className='blacktext' onClick={() => this.buyBullet()} color="danger">- {this.state.bulletCost}cr</Button>{' '}
                         </div>
-                        <h4>Increase bullet size to {this.state.bulletSize + 2}</h4>
-                        <Button className='blacktext' onClick={() => this.buyBullet()} color="danger">- {this.state.bulletCost}cr</Button>{' '}
 
                     </div>
                 </div>

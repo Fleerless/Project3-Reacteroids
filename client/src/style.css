@@ -385,6 +385,28 @@ header nav ul li a {
   font-family: 'Montserrat';
 }
 
+.buy-ship {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+
+.buy-bullet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buy-bullet h4 {
+  display: flex;
+  justify-content: center
+}
+
+.ship-div {
+  display: flex;
+  flex-direction: column
+}
+
 @media only screen and (max-width: 840px) {
   .playGameLink {
     position: absolute;
