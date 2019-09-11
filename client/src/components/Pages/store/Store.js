@@ -29,8 +29,12 @@ export class Store extends Component {
             username: this.props.username,
             shipCount: this.props.shipCount,
             bulletCount: this.props.bulletCount,
-            bulletSize: this.props.bulletSize
         })
+        if (this.props.username){
+            this.setState({
+                bulletSize: this.props.bulletSize
+            })
+        }
         setTimeout(this.updateCosts, 500)
     }
 
