@@ -89,6 +89,9 @@ class Signup extends Component {
 				})
 
 		}
+		this.setState({
+			redirectTo: '/game'
+		})
 	}
 
 	toggle = event => {
