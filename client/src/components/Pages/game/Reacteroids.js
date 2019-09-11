@@ -40,7 +40,8 @@ class Reacteroids extends Component {
       asteroidCount: 3,
       currentScore: 0,
       topScore: null,
-      inGame: false
+      inGame: false,
+      credits: 0
     }
     this.ship = [];
     this.asteroids = [];
@@ -85,6 +86,8 @@ class Reacteroids extends Component {
     this.setState({ context: context, topScore: this.props.highScore });
     this.startGame();
     requestAnimationFrame(() => {this.update()});
+    this.setState({
+      credits: this.props.credits})
   }
 
   componentWillUnmount() {
@@ -170,20 +173,30 @@ class Reacteroids extends Component {
 
     // Replace top score
     if(this.state.currentScore > this.state.topScore){
-      const userData= {username:localStorage.getItem("username"),score:this.state.currentScore}
-      axios.put('/user/highscore',userData).then(response =>{
-      
-
-
-      })
       this.setState({
         topScore: this.state.currentScore,
-      });
-     
-
-
+      })
+      const userData= {username:localStorage.getItem("username"),score:this.state.currentScore}
+      axios.put('/user/highscore',userData)
+      .catch(err =>{
+        console.log(err)
+      })
     }
-  
+    let newCredits= this.state.credits + this.state.currentScore;
+    console.log(newCredits)
+    this.setState({
+      credits: newCredits
+    });
+    this.props.updateUser({
+      credits: newCredits
+    })
+    let creditsObject ={
+      username: this.props.username,
+      newCredits: newCredits
+    }
+    axios.post('/user/newcredits', creditsObject)
+    .catch(err => console.log(err))
+
   }
 
   generateAsteroids(howMany){
@@ -255,9 +268,9 @@ class Reacteroids extends Component {
     if (this.state.currentScore <= 0) {
       message = '0 points... So sad.';
     } else if (this.state.currentScore >= this.state.topScore){
-      message = 'Top score with ' + this.state.currentScore + ' points. Woo!';
+      message = 'You got a high score! Added ' + this.state.currentScore + ' to your credits. Woo!';
     } else {
-      message = this.state.currentScore + ' Points though :)'
+      message = this.state.currentScore + ' added to your credits :)'
     }
 
     if(!this.state.inGame){
@@ -276,7 +289,7 @@ class Reacteroids extends Component {
     return (
       <div className = "bodygame">
         { endgame }
-        <span className="score current-score" >Score: {this.state.currentScore}</span>
+        <span className="score current-score" >Credits: {this.state.credits}     Score: {this.state.currentScore}</span>
         <span className="score top-score" >Top Score: {this.state.topScore}</span>
         <span className="controls" >
           Use [A][S][W][D] or [←][↑][↓][→] to MOVE<br/>

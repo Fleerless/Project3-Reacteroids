@@ -118,7 +118,7 @@ const shipUpdate = req.body;
 
 
 ${JSON.stringify(shipUpdate)}`)
-    User.update(
+    User.findOneAndUpdate(
         { "username": shipUpdate.username },
         {$set: {"shipColor": shipUpdate.shipColor,
                 'shipOutline': shipUpdate.shipOutline,
@@ -149,7 +149,7 @@ const shipUpdate = req.body;
 
 
 ${JSON.stringify(shipUpdate)}`)
-    User.update(
+    User.findOneAndUpdate(
         { "username": shipUpdate.username },
         {$set: {"bulletSize": shipUpdate.bullet,
                 'credits': shipUpdate.newCredits,
@@ -171,5 +171,27 @@ ${JSON.stringify(shipUpdate)}`)
     }) 
 })
 
+router.post('/newcredits', (req, res) => {
+let newCredits = req.body;
+console.log(JSON.stringify(newCredits))
+User.findOneAndUpdate(
+        { "username": newCredits.username },
+        {$set: {'credits': newCredits.newCredits}})
+           .then(data=>{
+        console.log(`
+        
+----------  DATA  -------------
+
+        
+        ${JSON.stringify(data)}`);
+    }).catch(error=>{
+        console.log(`
+
+--------------  ERROR  ----------------
+        
+        ${error}`);
+        res.send(error);
+    }) 
+})
 
 module.exports = router

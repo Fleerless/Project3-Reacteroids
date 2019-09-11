@@ -57,7 +57,17 @@ class Signup extends Component {
 				modalDisplay: true
 			})
 		} else {
-			localStorage.setItem("username", this.state.username)
+			this.props.updateUser({
+				loggedIn: true,
+				username: this.state.username,
+				highScore: null,
+				credits: 0,
+				shipColor: null,
+				shipCount: null,
+				shipOutline: null,
+				bulletSize: 2,
+				bulletCount: null
+			})
 			//request to server to add a new username/password
 			axios.post('/user/', {
 				username: this.state.username,

@@ -52,7 +52,7 @@ export class Home extends Component {
                             <div className="inner">
                                 <div className="loginUser">
                                     {this.state.isShowSignup ?
-                                        <SignUp closeSignup={this.closeSignup} /> :
+                                        <SignUp closeSignup={this.closeSignup} updateUser={this.props.updateUser} /> :
                                         <Login openSignup={this.openSignup} updateUser={this.props.updateUser} />
                                     }
                                 </div>

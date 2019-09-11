@@ -16,7 +16,7 @@ export class Store extends Component {
             shipCost: null,
             bulletCount: null,
             bulletPrice: 4000,
-            bulletSize: null,
+            bulletSize: 2,
             bulletCost: null
         }
         this.updateCosts = this.updateCosts.bind(this)
@@ -137,7 +137,7 @@ export class Store extends Component {
                             <img></img>
                             <img></img>
                         </div>
-                        <h4>Increase bullet size by 2</h4>
+                        <h4>Increase bullet size to {this.state.bulletSize + 2}</h4>
                         <Button className='blacktext' onClick={() => this.buyBullet()} color="danger">- {this.state.bulletCost}cr</Button>{' '}
 
                     </div>
