@@ -30,7 +30,7 @@ export class Store extends Component {
             shipCount: this.props.shipCount,
             bulletCount: this.props.bulletCount,
         })
-        if (this.props.username){
+        if (this.props.bulletSize){
             this.setState({
                 bulletSize: this.props.bulletSize
             })
