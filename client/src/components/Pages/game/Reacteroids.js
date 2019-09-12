@@ -176,8 +176,8 @@ class Reacteroids extends Component {
       this.setState({
         topScore: this.state.currentScore,
       })
-      const userData= {username:localStorage.getItem("username"),score:this.state.currentScore}
-      axios.put('/user/highscore',userData)
+      const userData= {username: this.props.username, score: this.state.currentScore}
+      axios.put('/user/highscore', userData)
       .catch(err =>{
         console.log(err)
       })
@@ -188,7 +188,8 @@ class Reacteroids extends Component {
       credits: newCredits
     });
     this.props.updateUser({
-      credits: newCredits
+      credits: newCredits,
+      highScore: this.state.currentScore
     })
     let creditsObject ={
       username: this.props.username,
