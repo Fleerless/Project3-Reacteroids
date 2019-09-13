@@ -74,7 +74,6 @@ class Signup extends Component {
 				password: this.state.password
 			})
 				.then(response => {
-					console.log(response)
 					if (!response.data.errmsg) {
 						console.log('successful signup')
 						this.setState({ //redirect to login page
@@ -82,7 +81,11 @@ class Signup extends Component {
 						})
 						this.props.closeSignup()
 					} else {
-						console.log('username already taken')
+						this.setState({
+							message: "Please choose another User Name",
+							heading: 'USERNAME TAKEN',
+							modalDisplay: true
+						})
 					}
 				}).catch(error => {
 					console.log('signup error: ', error)	

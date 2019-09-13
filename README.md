@@ -1,6 +1,6 @@
 # Game Overview
 
-Welcome to Reacteroids!! This is our rendition of the classic Asteroids game, remodeled as a _"freemium"_ game. 
+Welcome to Reacteroids!! This is a rendition of the classic Asteroids game, remodeled as a _"freemium"_ game. 
 
 ## There are two ways to play the game.
 
@@ -11,7 +11,7 @@ You can play the game without creating an account or logging in! Just click the 
 You can also Signup to create a user account. When users play under their created account game data is saved to a database, and retrieved wach time they log in. This way they can keep track of their progress over several separate sessions. Additionally, registered Users are entered into the High Scores table, and can compete for bragging rights of the highest ever score.
 
 ## Store Overview
-The store allows Users who have acquired enough credits to purchase upgrades. Currently there are two types of upgrades available, _change ship color_, and _increase bullet size_. The first purchase of wach upgrade type is free, and each purchase gets more expensive, based on a built in multiplier. Users start with a black and whit ship, and can change the color between 3 choices of color ways. Users also start with a default bullet size of 2. Each purchase of the bullet upgrade increases the bullet size by an additional 2 pixels. 
+The store allows Users who have acquired enough credits to purchase upgrades. Currently there are two types of upgrades available, _change ship color_, and _increase bullet size_. The first purchase of each upgrade type is free, and each purchase gets more expensive, based on a built in multiplier. Users start with a black and white ship, and can change the color between 3 choices of color ways. Users also start with a default bullet size of 2. Each purchase of the bullet upgrade increases the bullet size by an additional 2 pixels. 
 
 ## How to Play
 

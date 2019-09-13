@@ -23,19 +23,13 @@ class LoginForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        console.log('handleSubmit')
-
-        axios
-            .post('/user/login', {
+        axios.post('/user/login', {
                 username: this.state.username,
                 password: this.state.password
             })
             .then(response => {
-                console.log('login response: ')
-                console.log(response)
+                console.log('login response: ', response)
                 if (response.status === 200) {
-                   
-                    localStorage.setItem("username", response.data.username)
                     // update App.js state
                     this.props.updateUser({
                         loggedIn: true,
@@ -47,7 +41,6 @@ class LoginForm extends Component {
 				    	shipOutline: response.data.shipOutline,
 					    bulletSize: response.data.bulletSize,
 					    bulletCount: response.data.bulletCount
-					
                     })
                     // update the state to redirect to home
                     this.setState({
@@ -55,8 +48,7 @@ class LoginForm extends Component {
                     })
                 }
             }).catch(error => {
-                console.log('login error: ')
-                console.log(error);
+                console.log('login error: ', error)
                 
             })
     }

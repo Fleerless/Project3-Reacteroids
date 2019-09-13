@@ -37,7 +37,7 @@ class Reacteroids extends Component {
         down  : 0,
         space : 0,
       },
-      asteroidCount: 3,
+      asteroidCount: 0,
       currentScore: 0,
       topScore: null,
       inGame: false,
@@ -183,13 +183,12 @@ class Reacteroids extends Component {
       })
     }
     let newCredits= this.state.credits + this.state.currentScore;
-    console.log(newCredits)
     this.setState({
       credits: newCredits
     });
     this.props.updateUser({
       credits: newCredits,
-      highScore: this.state.currentScore
+      highScore: this.state.topScore
     })
     let creditsObject ={
       username: this.props.username,
