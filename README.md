@@ -15,8 +15,9 @@ The store allows Users who have acquired enough credits to purchase upgrades. Cu
 
 ## How to Play
 
-1. In the **root** level of the directory run `node server.js`
+1. At any directory level, run `mongod`
 1. **In a separate terminal window** cd into **client** and run `npm start`. The game will automatically open a window in your default browser and start the app.
+1. In a **third terminal window** navigate to the **root** level of this directory run `node server.js`
 1. _**NOTE:** Reloading the page will log you out and reset the game_
 
 
