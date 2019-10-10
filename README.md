@@ -1,5 +1,5 @@
-#[Reacteroids](https://project3-reacteroids.herokuapp.com)
 # Game Overview
+[Reacteroids](https://project3-reacteroids.herokuapp.com)
 
 Welcome to Reacteroids!! This is a rendition of the classic Asteroids game, remodeled as a _"freemium"_ game. 
 
