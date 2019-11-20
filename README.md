@@ -19,6 +19,7 @@ The store allows Users who have acquired enough credits to purchase upgrades. Cu
 
 Click [here](https://project3-reacteroids.herokuapp.com) to play Reacteroids!
 
+1. Clone this repository to your local machine, and navigate to its directory.
 1. At any directory level, run `mongod`
 1. **In a separate terminal window** cd into **client** and run `npm start`. The game will automatically open a window in your default browser and start the app.
 1. In a **third terminal window** navigate to the **root** level of this directory run `node server.js`
