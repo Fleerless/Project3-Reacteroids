@@ -17,41 +17,10 @@ The store allows Users who have acquired enough credits to purchase upgrades. Cu
 
 ## How to Play
 
+Click [here](https://project3-reacteroids.herokuapp.com) to play Reacteroids!
+
 1. At any directory level, run `mongod`
 1. **In a separate terminal window** cd into **client** and run `npm start`. The game will automatically open a window in your default browser and start the app.
 1. In a **third terminal window** navigate to the **root** level of this directory run `node server.js`
 1. _**NOTE:** Reloading the page will log you out and reset the game_
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
