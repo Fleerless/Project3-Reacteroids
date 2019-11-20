@@ -2,7 +2,7 @@
 
 Welcome to [Reacteroids](https://project3-reacteroids.herokuapp.com/)!! This is a rendition of the classic Asteroids game, remodeled as a _"freemium"_ game. 
 
-![](client/public/Reacteroids.mp4)
+![](client/public/Reacteroids.gif)
 
 ## There are two ways to play the game.
 
