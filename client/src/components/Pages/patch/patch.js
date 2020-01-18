@@ -114,7 +114,7 @@ export const Patch = props =>
 					</Typography>
 					<CardActions>
 					<div className="portfolioButton">
-						<Button size="small" href="https://fleerless.github.io/Responsive-Portfolio/">Portfolio</Button>
+						<Button size="small" href="https://jeffrey-fleer-portfolio.herokuapp.com/">Portfolio</Button>
 					</div>
 					</CardActions>
 				</CardContent>
