@@ -119,7 +119,10 @@ render() {
 				/> 
 			{/* <Example/> */}
 			<div className="SignupForm">
-				<h4>Sign up</h4>
+				<div>
+					
+				</div>
+				<h4 class="input">Sign up</h4>
 				<form className="form-horizontal">
 					<Input 
 					type="text"
@@ -139,15 +142,16 @@ render() {
 					value={this.state.password}
 					onChange={this.handleChange}
 					/>
-					<h7>Re-Enter Password:</h7>
 					<Input
 					type="password"
 					id="password2"
 					placeholder="Password"
+					label="Re-Enter Password:"
 					name="password2"
 					value={this.state.password2}
 					onChange={this.handleChange}
 					/>
+					<div className="signup-buttons">
 					<SubmitButton 
 					className="btn btn-primary col-1 col-mr-auto"
 					onClick={this.handleSubmit}
@@ -160,6 +164,7 @@ render() {
 					type=""
 					text="Return to Login"
 					/>
+					</div>
 				</form>
 			</div>
 		</div>

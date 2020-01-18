@@ -60,7 +60,7 @@ class LoginForm extends Component {
             return (
                 <div>
                     <form className="form-horizontal">
-                        <div className="form-group">
+                        <div className="form-group input">
                             <div className="col-1 col-ml-auto">
                                 <label className="form-label" htmlFor="username">Username</label>
                             </div>
@@ -75,7 +75,7 @@ class LoginForm extends Component {
                                 />
                             </div>
                         </div>
-                        <div className="form-group">
+                        <div className="form-group input">
                             <div className="col-1 col-ml-auto">
                                 <label className="form-label" htmlFor="password">Password: </label>
                             </div>

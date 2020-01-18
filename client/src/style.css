@@ -184,6 +184,12 @@ button:hover {
   animation: glowing 1500ms infinite;
 }
 
+.input {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
 @-webkit-keyframes glowing {
   0% {
     background-color: #B20000;
@@ -405,6 +411,11 @@ header nav ul li a {
 .ship-div {
   display: flex;
   flex-direction: column
+}
+
+.signup-buttons {
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 840px) {

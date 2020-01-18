@@ -2,7 +2,7 @@ import React from "react";
 
 function Input (props){
     return (
-    <div className="form-group">
+    <div className="form-group input">
         <div className="col-1 col-ml-auto">
             <label className="form-label" htmlFor="username">{props.label}</label>
         </div>

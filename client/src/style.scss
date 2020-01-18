@@ -179,6 +179,11 @@ button:hover {
     animation: glowing 1500ms infinite;
 }
 
+.signup-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 @-webkit-keyframes glowing {
     0% {
         background-color: #B20000;
@@ -213,22 +218,22 @@ button:hover {
     }
 }
 
-@-o-keyframes glowing {
-    0% {
-        background-color: #B20000;
-        box-shadow: 0 0 3px #B20000;
-    }
+// @-o-keyframes glowing {
+//     0% {
+//         background-color: #B20000;
+//         box-shadow: 0 0 3px #B20000;
+//     }
 
-    50% {
-        background-color: #FF0000;
-        box-shadow: 0 0 40px #FF0000;
-    }
+//     50% {
+//         background-color: #FF0000;
+//         box-shadow: 0 0 40px #FF0000;
+//     }
 
-    100% {
-        background-color: #B20000;
-        box-shadow: 0 0 3px #B20000;
-    }
-}
+//     100% {
+//         background-color: #B20000;
+//         box-shadow: 0 0 3px #B20000;
+//     }
+// }
 
 @keyframes glowing {
     0% {
