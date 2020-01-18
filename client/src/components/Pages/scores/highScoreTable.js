@@ -67,7 +67,17 @@ export default class ScoreTable extends React.Component {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    <TableRow >
+                                    {this.state.scoreHigh.map(user => (
+                                        <TableRow>
+                                            <TableCell>
+                                                {user.username}
+                                            </TableCell>
+                                            <TableCell>
+                                                {user.highScore}
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                    {/* <TableRow >
                                         {this.state.scoreHigh.map(user => (
                                             <div>
                                                 <TableCell>
@@ -79,7 +89,7 @@ export default class ScoreTable extends React.Component {
                                                 </TableCell>
                                             </div>
                                         ))}
-                                    </TableRow>
+                                    </TableRow> */}
 
 
                                 </TableBody>
